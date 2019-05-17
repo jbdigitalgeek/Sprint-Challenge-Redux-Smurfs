@@ -13,6 +13,14 @@
    error: null
  }
 */
+const initialState = {
+  smurfs: [],
+  fetchingSmurfs: false,
+  addingSmurf: false,
+  updatingSmurf: false,
+  deletingSmurf: false,
+  error: null
+};
 
 /*
   You'll only need one smurf reducer for this project.
