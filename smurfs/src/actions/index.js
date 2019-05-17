@@ -23,13 +23,13 @@ export const FETCH_ERROR = "FETCH_ERROR";
 */
 
 export const fetchSmurfs = () => dispatch => {
-  dispatch({ type: FETCHING_SMURFS });
-  axios
+  dispatch({ type: FETCHING_SMURFS});
+  axios 
     .get(`http://localhost:3333/smurfs`)
     .then(res => {
-    dispatch({ type: FETCH_SUCCESS, payload: res.data })
+      dispatch({ type: FETCH_SUCCESS, payload: res.data })
     })
     .catch(err => {
-    dispatch({ type: FETCH_ERROR, payload: err})
-  })
+      dispatch({ type: FETCH_ERROR, payload: err})
+    });
 };

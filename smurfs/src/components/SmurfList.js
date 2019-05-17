@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions";
 
-class smurfList extends Component {
+class SmurfList extends Component {
   componentDidMount() {
     this.props.fetchSmurfs();
   }
@@ -14,7 +14,6 @@ class smurfList extends Component {
             <h1>{smurf.name}</h1>
             <h2>{smurf.age}</h2>
             <h3>{smurf.height}</h3>
-            )}
           </div>
         ))}
       </div>
@@ -29,4 +28,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { fetchSmurfs })(smurfList); 
+export default connect(mapStateToProps, { fetchSmurfs })(SmurfList); 

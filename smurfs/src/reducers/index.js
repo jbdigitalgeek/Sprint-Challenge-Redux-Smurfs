@@ -42,8 +42,12 @@ const rootReducer = (state = initialState, action) => {
       };
     case FETCH_ERROR:
       return {
-        ...state, fetchingSmurfs: false, error: action.payload
+        ...state,
+        fetchingSmurfs: false,
+        error: action.payload
       };
+    default:
+      return state;
   }
 };
 
